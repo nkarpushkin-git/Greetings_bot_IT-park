@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>804</width>
+    <height>727</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>801</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>200</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="eventsLabel">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Список Ивентов:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QListWidget" name="listWidget"/>
+       </item>
+       <item>
+        <widget class="QListView" name="listView"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>804</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="authAction"/>
+    <addaction name="logoutAction"/>
+    <addaction name="separator"/>
+    <addaction name="Exit"/>
+   </widget>
+   <widget class="QMenu" name="GuestMenu">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Гости</string>
+    </property>
+    <addaction name="GuestAdd"/>
+    <addaction name="ModifyGuest"/>
+    <addaction name="RemoveGuest"/>
+   </widget>
+   <widget class="QMenu" name="UsersMenu">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Пользователи</string>
+    </property>
+    <addaction name="UserAdd"/>
+    <addaction name="UserModify"/>
+    <addaction name="UserRmv"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="GuestMenu"/>
+   <addaction name="UsersMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="statusTip">
+    <string>IT-парк Якутия</string>
+   </property>
+  </widget>
+  <action name="logoutAction">
+   <property name="text">
+    <string>Отключиться CTRL+L</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="Exit">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../icons/exit.png</normaloff>../../icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выход CTRL+Q</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="GuestAdd">
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавить нового гостя в базу данных</string>
+   </property>
+   <property name="statusTip">
+    <string>Добавить нового гостя в базу данных</string>
+   </property>
+  </action>
+  <action name="ModifyGuest">
+   <property name="text">
+    <string>Изменить</string>
+   </property>
+   <property name="toolTip">
+    <string>Изменить данные гостя в базе данных</string>
+   </property>
+  </action>
+  <action name="RemoveGuest">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить гостя из базы данных</string>
+   </property>
+  </action>
+  <action name="UserAdd">
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавить нового пользователя</string>
+   </property>
+  </action>
+  <action name="UserModify">
+   <property name="text">
+    <string>Изменить</string>
+   </property>
+   <property name="toolTip">
+    <string>Изменить данные пользователя</string>
+   </property>
+  </action>
+  <action name="UserRmv">
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить удалить пользователя</string>
+   </property>
+  </action>
+  <action name="authAction">
+   <property name="text">
+    <string>Авторизация</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
